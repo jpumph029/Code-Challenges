@@ -32,15 +32,15 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-var arr = [];
 const addValues = (arr, value) => {
-  console.log( arr);
+  arr.push(value);
 }
 
 const addNumbers = (num, arr, times, callback) => {
-   callback(addNumbers)
-  arr.forEach(callback);
-
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr; 
 }
 
 /* ------------------------------------------------------------------------------------------------
